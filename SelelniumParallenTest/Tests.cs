@@ -10,11 +10,14 @@ namespace SelelniumParallenTest
     [Parallelizable]
     public class FirefoxTesting : Hooks
     {
+        public FirefoxTesting() : base(BroserType.Firefox)
+        {
+        }
+
         [Test]
         public void FirefoxGoogleTest()
         {
             string url = "https://www.google.co.nz/";
-            Thread.Sleep(2000);
             Driver.Navigate().GoToUrl(url);
             Driver.FindElement(By.Name("q")).SendKeys("Selenium");
             Driver.FindElement(By.Name("btnK")).Click();
@@ -26,6 +29,11 @@ namespace SelelniumParallenTest
     [Parallelizable]
     public class ChromeTesting : Hooks
     {
+        public ChromeTesting() : base(BroserType.Chrome)
+        {
+            
+        }
+
         [Test]
         public void CHromeGoogleTest()
         {
