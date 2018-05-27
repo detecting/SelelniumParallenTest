@@ -31,7 +31,10 @@ namespace SelelniumParallenTest
         {
             if (broserType == BroserType.Chrome)
             {
-                Driver = new ChromeDriver();
+                ChromeOptions option=new ChromeOptions();
+                option.AddArgument("--headless");
+                Driver = new ChromeDriver(option);
+                
             }
 
             if (broserType == BroserType.Firefox)
