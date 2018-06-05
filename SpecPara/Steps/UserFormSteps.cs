@@ -14,7 +14,6 @@ namespace SpecPara.Steps
     [Binding]
     public class UserFormSteps
     {
-
         private readonly IWebDriver _driver;
 
         public UserFormSteps(IWebDriver driver)
@@ -25,7 +24,6 @@ namespace SpecPara.Steps
         [Given(@"I start entering user form details like")]
         public void GivenIStartEnteringUserFormDetailsLike(Table table)
         {
-            
             dynamic data = table.CreateDynamicSet();
             foreach (var VARIABLE in data)
             {
@@ -39,7 +37,33 @@ namespace SpecPara.Steps
         [Given(@"I click submit button")]
         public void GivenIClickSubmitButton()
         {
-            ScenarioContext.Current.Pending();
         }
+
+        [Given(@"I Verify the entered the form detail in the application database")]
+        public void GivenIVerifyTheEnteredTheFormDetailInTheApplicationDatabase(Table table)
+        {
+            //autDatabases is a collection
+            List<AUTDatabase> autDatabases=new List<AUTDatabase>()
+            {
+                //也可以有多个元素（raw）
+                new AUTDatabase()
+                {
+                    Initial = "huamin",
+                    FirstName = "zhang",
+                    MiddleName = "hello"
+                }
+            };
+            //compare table with the autDatabases to check if they are the same
+            var result = table.FindAllInSet(autDatabases);
+            Console.WriteLine(result);
+        }
+    }
+
+    public class AUTDatabase
+    {
+        public string Initial { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string Gender { get; set; }
     }
 }
