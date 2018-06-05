@@ -1,0 +1,12 @@
+In SpecPara, add the parrallel execution
+
+1 [assembly:Parallelizable(ParallelScope.Fixtures)]
+2 in Hooks    public readonly IObjectContainer _ObjectContainer;
+        private IWebDriver _driver;
+    and
+   //先初始化在进行注册
+            _driver = new ChromeDriver();
+            //the most important step
+            //register the instance object
+            //在运行之前将driver注册到容器
+            _ObjectContainer.RegisterInstanceAs<IWebDriver>(_driver);
