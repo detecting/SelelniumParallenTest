@@ -34,7 +34,7 @@ namespace SelelniumParallenTest
                 ChromeOptions option=new ChromeOptions();
                 option.AddArgument("--headless");
                 Driver = new ChromeDriver(option);
-                
+                 
             }
 
             if (broserType == BroserType.Firefox)

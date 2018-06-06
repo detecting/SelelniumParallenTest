@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\Documents\Visual Studio 2015\Projects\SpecflowIntro\SpecflowIntro\SpecflowIntro.csproj" t="IncludeRecursive" />
     <e p="C:\Users\hzha321\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_SelelniumParallenTest.684773542.00" t="ExcludeRecursive" />
     <e p="C:\Users\hzha321\RiderProjects\SelelniumParallenTest" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
-      <e p="SelelniumParallenTest" t="IncludeRecursive">
+      <e p="SelelniumParallenTest\SelelniumParallenTest.csproj" t="IncludeRecursive" />
+      <e p="SelelniumParallenTest.sln" t="IncludeFlat" />
+      <e p="SpecPara" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
         <e p="Base.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="extent-config.xml" t="Include" />
+        <e p="Feature" t="Include">
+          <e p="Login.feature" t="Include" />
+          <e p="Login.feature.cs" t="Include" />
+          <e p="UserForm.feature" t="Include" />
+          <e p="UserForm.feature.cs" t="Include" />
+        </e>
         <e p="Hooks.cs" t="Include" />
+        <e p="license" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="SelelniumParallenTest.csproj" t="IncludeRecursive" />
-        <e p="Tests.cs" t="Include" />
+        <e p="SpecPara.csproj" t="IncludeRecursive" />
+        <e p="Steps" t="Include">
+          <e p="LoginSteps.cs" t="Include" />
+          <e p="UserFormSteps.cs" t="Include" />
+        </e>
       </e>
-      <e p="SelelniumParallenTest.sln" t="IncludeFlat" />
     </e>
   </component>
 </project>
