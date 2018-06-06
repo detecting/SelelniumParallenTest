@@ -51,8 +51,16 @@ namespace SpecPara.Steps
         {
             Console.WriteLine("I Login");
             IWebElement element = _driver.FindElement(By.XPath("/html/body/h1"));
+
             //if the test is null ,  "Header is not fount" print out.
-            Assert.That(element.Text, Is.Not.Null, "Header is not fount");
+            //use assert mutiple, to execute mutiple assertion even one of them is fail, the other can also going.
+            Assert.Multiple(() =>
+            {
+                Assert.That(element.Text, Is.Null, "Header is not fount");
+                Assert.That(element.Text, Is.Not.Null, "Header is not fount");
+
+            });
+            
         }
     }
 }
